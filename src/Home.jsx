@@ -1,7 +1,7 @@
 import './Practice.css'
-import skyImage from './assets/Sky.jpg'
+import {Link} from "react-router-dom";
 
-function Practice() {
+function Home() {
     return (
         <div>
             <h1>朝食と栄養</h1>
@@ -46,11 +46,35 @@ function Practice() {
             <p>水の化学式はH<sub>2</sub>Oです。</p>
             <hr/>
 
-            <p>画像</p>
+            <p>好きなゲームの公式サイト(外部リンク)</p>
+            {/*サイトに飛べるタグ*/}
+            <a href="https://pjsekai.sega.jp/">プロセカ</a>
 
-            <img src={skyImage} alt="空の画像" width="50%" height= "0%"/>
+            <hr/>
+
+            {/*新たなタブでサイトに飛べる*/}
+            <a href="https://pjsekai.sega.jp/" target="_blank">プロセカ</a><br/>
+            <a href="https://www.fate-go.jp/" target="_blank">FGO</a>
+
+            <hr/>
+
+            {/*新たなタブでサイトに飛びそのタブを再利用"reuse"はどんな名前でも良い*/}
+            <a href="https://pjsekai.sega.jp/" target="reuse">プロセカ</a><br/>
+            <a href="https://www.fate-go.jp/" target="reuse">FGO</a>
+
+            <hr/>
+
+            {/*セキュリティー対策*/}
+            <a href="https://www.fate-go.jp/" target="_blank" rel="noopener noreferrer">FGO</a>
+
+            <p>内部リンク</p>
+            {/*a hrefはリロードが発生するので内部では使わない*/}
+            <p>画像は
+                <Link to="/image">こちら</Link>
+                です。
+            </p>
         </div>
     );
 }
 
-export default Practice;
+export default Home;
