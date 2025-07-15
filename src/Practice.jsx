@@ -1,4 +1,5 @@
 import './Practice.css'
+import skyImage from './assets/Sky.jpg'
 
 function Practice() {
     return (
@@ -41,9 +42,15 @@ function Practice() {
 
             <p><i>Mr.IS</i></p>
             {/*subは斜め下に何かを表示するタグ*/}
-                
+
             <p>水の化学式はH<sub>2</sub>Oです。</p>
-        </div>);
+            <hr/>
+
+            <p>画像</p>
+
+            <img src={skyImage} alt="空の画像" width="50%" height= "0%"/>
+        </div>
+    );
 }
 
-export default Practice
+export default Practice;
