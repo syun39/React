@@ -1,9 +1,21 @@
 import './Practice.css'
-import {Link} from "react-router-dom";
+import {Link as RouterLink} from "react-router-dom";
+import {Link as ScrollLink, Element} from "react-scroll";
 
 function Home() {
     return (
         <div>
+            <h1>スクロールリンク</h1>
+            <nav>
+                <ul>
+                    <li>
+                        {/*smooth={true}は滑らかにスクロール {false}は瞬時に移動*/}
+                        {/*duration={500}は500ミリ秒（0.5秒）かけて移動*/}
+                        <ScrollLink to="section1" smooth={true} duration={500}>内部リンク</ScrollLink>
+                    </li>
+                </ul>
+            </nav>
+
             <h1>朝食と栄養</h1>
             <p>普段の朝食で食べる栄養について</p>
             <hr/>
@@ -25,6 +37,7 @@ function Home() {
             {/*区切り線を入れるタグ*/}
             <hr/>
 
+            <h1>お知らせ</h1>
             {/*bは文字を太くするタグ*/}
             <p>今日は<b>重要なお知らせ</b>があります。</p>
             <p>
@@ -67,12 +80,14 @@ function Home() {
             {/*セキュリティー対策*/}
             <a href="https://www.fate-go.jp/" target="_blank" rel="noopener noreferrer">FGO</a>
 
-            <p>内部リンク</p>
-            {/*a hrefはリロードが発生するので内部では使わない*/}
-            <p>画像は
-                <Link to="/image">こちら</Link>
-                です。
-            </p>
+            <Element name="section1">
+                <p>内部リンク</p>
+                {/*a hrefはリロードが発生するので内部では使わない*/}
+                <p>画像は
+                    <RouterLink to="/image">こちら</RouterLink>
+                    です。
+                </p>
+            </Element>
         </div>
     );
 }
