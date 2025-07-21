@@ -1,4 +1,4 @@
-import './Practice.css'
+import './Home.css'
 import {Link as RouterLink} from "react-router-dom";
 import {Link as ScrollLink, Element} from "react-scroll";
 

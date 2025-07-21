@@ -1,0 +1,8 @@
+h2{
+    text-align: center;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* 画像間のスペース */
+}
