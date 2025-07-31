@@ -12,6 +12,14 @@ function Image() {
                 <img src={SkyImage} alt="空の画像" width="30%"/>
                 <img src={SKYImage} alt="空の画像" width="30%"/>
             </div>
+
+            <h2>空の動画</h2>
+            <div className="video">
+                <video width="90%" controls>
+                    <source src="Gacha.mp4" type="video/mp4" />
+                    お使いのブラウザは video タグをサポートしていません。
+                </video>
+            </div>
         </div>
     );
 }

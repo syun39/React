@@ -6,3 +6,7 @@ h2{
     justify-content: center;
     gap: 60px; /* 画像間のスペース */
 }
+.video{
+    display: flex;
+    justify-content: center;
+}
