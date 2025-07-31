@@ -17,7 +17,6 @@ function Image() {
             <div className="video">
                 <video width="90%" controls>
                     <source src="Gacha.mp4" type="video/mp4" />
-                    お使いのブラウザは video タグをサポートしていません。
                 </video>
             </div>
         </div>
