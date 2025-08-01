@@ -1,10 +1,13 @@
 import './Home.css'
 import {Link as RouterLink} from "react-router-dom";
 import {Link as ScrollLink, Element} from "react-scroll";
+import Table from "./Table.jsx";
+import Table2 from "./Table2.jsx";
 
 function Home() {
     return (
         <div>
+
             <h1>スクロールリンク</h1>
             <nav>
                 <ul>
@@ -113,6 +116,13 @@ function Home() {
                 <li>スマホを触る</li>
                 <li>朝ご飯を食べる</li>
             </ol>
+
+            {/*コンポーメント思考*/}
+            <h2>表の作成</h2>
+            <Table/>
+            <br/>
+            <Table2/>
+
         </div>
     );
 }
